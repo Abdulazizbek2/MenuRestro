@@ -258,3 +258,4 @@
 /Users/abdulazizbek/Documents/1_developer/csharp_uini/MenuRestro/MenuRestro/bin/Debug/net8.0/runtimes/win/lib/net7.0/System.Security.Cryptography.ProtectedData.dll
 /Users/abdulazizbek/Documents/1_developer/csharp_uini/MenuRestro/MenuRestro/bin/Debug/net8.0/runtimes/win/lib/net7.0/System.Windows.Extensions.dll
 /Users/abdulazizbek/Documents/1_developer/csharp_uini/MenuRestro/MenuRestro/obj/Debug/net8.0/MenuRestro.csproj.Up2Date
+/Users/abdulazizbek/Documents/1_developer/csharp_uini/MenuRestro/MenuRestro/obj/Debug/net8.0/MenuRestro.sourcelink.json
