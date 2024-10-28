@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MenuRestro")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+38ae8a8e5c5e33a0e1e28f4edd2fd5a75bc31f54")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dbfd1f1911b14e35a056a86ca1988559a4e8d79b")]
 [assembly: System.Reflection.AssemblyProductAttribute("MenuRestro")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MenuRestro")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -17,4 +17,7 @@ RUN dotnet publish "MenuRestro.csproj" -c Release -o /app/publish
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
+
+# Выполнение миграции базы данных при запуске контейнера
 ENTRYPOINT ["dotnet", "MenuRestro.dll"]
+CMD ["sh", "-c", "dotnet ef database update && dotnet MenuRestro.dll"]
