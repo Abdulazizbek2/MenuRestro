@@ -184,7 +184,7 @@ namespace RestaurantMenuApp.Controllers
             return View(food);
         }
 
-        // POST: Foods/Delete/5   3
+        // POST: Foods/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
