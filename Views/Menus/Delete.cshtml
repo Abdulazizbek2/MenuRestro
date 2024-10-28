@@ -1,0 +1,19 @@
+@model MenuRestro.Models.Menu
+
+<h2>Удалить Меню</h2>
+
+<h4>Вы уверены, что хотите удалить это меню?</h4>
+<hr />
+<dl class="row">
+    <dt class="col-sm-2">Название</dt>
+    <dd class="col-sm-10">@Model.Name</dd>
+
+    <dt class="col-sm-2">Ресторан</dt>
+    <dd class="col-sm-10">@Model.Restaurant?.Name</dd>
+</dl>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="MenuId" />
+    <input type="submit" value="Удалить" class="btn btn-danger" />
+    <a asp-action="Index" class="btn btn-secondary">Отмена</a>
+</form>

@@ -1,0 +1,15 @@
+@model MenuRestro.Models.Food
+
+<h2>Детали Блюда</h2>
+
+<div>
+    <h4>@Model.Name</h4>
+    <p>@Model.Description</p>
+    <p>Тип блюда: @Model.TypeFood?.Name</p>
+    <p>Ресторан: @Model.Restaurant?.Name</p>
+    <img src="@Model.ImagePath" alt="@Model.Name" style="width:200px;" />
+</div>
+
+<a asp-action="Index" class="btn btn-secondary">Назад к списку</a>
+<a asp-action="Edit" asp-route-id="@Model.FoodId" class="btn btn-primary">Редактировать</a>
+<a asp-action="Delete" asp-route-id="@Model.FoodId" class="btn btn-danger">Удалить</a>

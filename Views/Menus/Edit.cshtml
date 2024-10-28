@@ -1,0 +1,20 @@
+﻿@model MenuRestro.Models.Menu
+
+<h2>Редактировать Меню</h2>
+
+<form asp-action="Edit">
+    <input type="hidden" asp-for="MenuId" />
+    <div class="form-group">
+        <label asp-for="Name" class="control-label"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="RestaurantId" class="control-label">Ресторан</label>
+        <select asp-for="RestaurantId" class="form-control" asp-items="ViewBag.RestaurantId"></select>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Сохранить" class="btn btn-primary" />
+        <a asp-action="Index" class="btn btn-secondary">Отмена</a>
+    </div>
+</form>

@@ -1,0 +1,27 @@
+@model MenuRestro.Models.Menu
+
+<h2>Детали Меню</h2>
+
+<div>
+    <h4>@Model.Name</h4>
+    <p><strong>Ресторан:</strong> @Model.Restaurant?.Name</p>
+</div>
+
+<h3>Блюда в меню</h3>
+@if (Model.Foods != null && Model.Foods.Any())
+{
+    <ul>
+        @foreach (var food in Model.Foods)
+        {
+            <li>@food.Name - @food.Description</li>
+        }
+    </ul>
+}
+else
+{
+    <p>Нет блюд в этом меню.</p>
+}
+
+<a asp-action="Index" class="btn btn-secondary">Назад к списку</a>
+<a asp-action="Edit" asp-route-id="@Model.MenuId" class="btn btn-primary">Редактировать</a>
+<a asp-action="Delete" asp-route-id="@Model.MenuId" class="btn btn-danger">Удалить</a>

@@ -1,0 +1,19 @@
+@model MenuRestro.Models.TypeFood
+
+<h2>Удалить Тип Блюда</h2>
+
+<div>
+    <h4>Вы уверены, что хотите удалить этот тип блюда?</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">Название</dt>
+        <dd class="col-sm-10">@Model.Name</dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="TypeFoodId" />
+        <input type="submit" value="Удалить" class="btn btn-danger" /> |
+        <a asp-action="Index" class="btn btn-secondary">Отмена</a>
+    </form>
+</div>
+``

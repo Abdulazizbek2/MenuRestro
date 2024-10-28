@@ -1,0 +1,26 @@
+﻿@model IEnumerable<MenuRestro.Models.TypeFood>
+
+<h2>Типы Блюд</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Название</th>
+            <th>Действия</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var typeFood in Model)
+        {
+            <tr>
+                <td>@typeFood.Name</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@typeFood.TypeFoodId">Редактировать</a> |
+                    <a asp-action="Delete" asp-route-id="@typeFood.TypeFoodId">Удалить</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Create" class="btn btn-primary">Добавить тип блюда</a>

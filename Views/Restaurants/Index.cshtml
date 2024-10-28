@@ -1,0 +1,29 @@
+﻿@model IEnumerable<MenuRestro.Models.Restaurant>
+
+<h2>Список Ресторанов</h2>
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Название</th>
+			<th>Описание</th>
+			<th>Действия</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var restaurant in Model)
+		{
+			<tr>
+				<td>@restaurant.Name</td>
+				<td>@restaurant.Description</td>
+				<td>
+					<a asp-action="Edit" asp-route-id="@restaurant.RestaurantId">Редактировать</a> |
+					<a asp-action="Delete" asp-route-id="@restaurant.RestaurantId">Удалить</a> |
+					<a asp-action="Details" asp-route-id="@restaurant.RestaurantId">Подробнее</a>
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>
+
+<a asp-action="Create" class="btn btn-primary">Добавить новый ресторан</a>
