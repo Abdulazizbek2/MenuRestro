@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pdyPBlDXk5o=",
+  "dgSpecHash": "3RV8IBfskK4=",
   "success": true,
-  "projectFilePath": "/Users/abdulazizbek/Documents/1_developer/csharp_uini/MenuRestro/MenuRestro/MenuRestro.csproj",
+  "projectFilePath": "/Users/abdulazizbek/Documents/1_developer/csharp_uini/git/MenuRestro/MenuRestro.csproj",
   "expectedPackageFiles": [
     "/Users/abdulazizbek/.nuget/packages/humanizer/2.14.1/humanizer.2.14.1.nupkg.sha512",
     "/Users/abdulazizbek/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/abdulazizbek/Documents/1_developer/csharp_uini/MenuRestro/MenuRestro/MenuRestro.csproj": {}
+    "/Users/abdulazizbek/Documents/1_developer/csharp_uini/git/MenuRestro/MenuRestro.csproj": {}
   },
   "projects": {
-    "/Users/abdulazizbek/Documents/1_developer/csharp_uini/MenuRestro/MenuRestro/MenuRestro.csproj": {
+    "/Users/abdulazizbek/Documents/1_developer/csharp_uini/git/MenuRestro/MenuRestro.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/abdulazizbek/Documents/1_developer/csharp_uini/MenuRestro/MenuRestro/MenuRestro.csproj",
+        "projectUniqueName": "/Users/abdulazizbek/Documents/1_developer/csharp_uini/git/MenuRestro/MenuRestro.csproj",
         "projectName": "MenuRestro",
-        "projectPath": "/Users/abdulazizbek/Documents/1_developer/csharp_uini/MenuRestro/MenuRestro/MenuRestro.csproj",
+        "projectPath": "/Users/abdulazizbek/Documents/1_developer/csharp_uini/git/MenuRestro/MenuRestro.csproj",
         "packagesPath": "/Users/abdulazizbek/.nuget/packages/",
-        "outputPath": "/Users/abdulazizbek/Documents/1_developer/csharp_uini/MenuRestro/MenuRestro/obj/",
+        "outputPath": "/Users/abdulazizbek/Documents/1_developer/csharp_uini/git/MenuRestro/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/abdulazizbek/.nuget/NuGet/NuGet.Config"
