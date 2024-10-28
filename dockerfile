@@ -21,29 +21,28 @@
 # # Выполнение миграции базы данных при запуске контейнера
 # ENTRYPOINT ["dotnet", "MenuRestro.dll"]
 # CMD ["sh", "-c", "dotnet ef database update && dotnet MenuRestro.dll"]
-# Используем официальный образ .NET
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
+
+# Ступень 1: Сборка приложения
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build-env
 WORKDIR /app
-EXPOSE 5264
 
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-WORKDIR /src
-COPY ["MenuRestro.csproj", "./"]
-RUN dotnet restore "./MenuRestro.csproj"
-COPY . .
-WORKDIR "/src/."
-RUN dotnet build "MenuRestro.csproj" -c Release -o /app/build
+# Копируем файл проекта и восстанавливаем зависимости
+COPY *.csproj ./
+RUN dotnet restore
 
-FROM build AS publish
-RUN dotnet publish "MenuRestro.csproj" -c Release -o /app/publish
+# Копируем все остальные файлы и собираем приложение
+COPY . ./
+RUN dotnet publish -c Release -o /out
 
-FROM base AS final
+# Ступень 2: Создание конечного образа
+FROM mcr.microsoft.com/dotnet/aspnet:7.0
 WORKDIR /app
-COPY --from=publish /app/publish .
 
-# Установите переменную окружения для использования в миграциях, если нужно
-# ENV ASPNETCORE_ENVIRONMENT Development
+# Копируем собранное приложение из этапа сборки
+COPY --from=build-env /out .
 
-# Выполнение миграции базы данных при запуске контейнера
-ENTRYPOINT ["dotnet", "ef", "database", "update", "--no-build", "--context", "YourDbContextName"]
-CMD ["dotnet", "MenuRestro.dll"]
+# Открываем порт для доступа к приложению
+EXPOSE 80
+
+# Запускаем приложение
+ENTRYPOINT ["dotnet", "MenuRestro.dll"]
